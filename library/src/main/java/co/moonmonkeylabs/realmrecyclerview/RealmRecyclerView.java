@@ -389,10 +389,10 @@ public class RealmRecyclerView extends FrameLayout {
             new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
                 public void onRefresh() {
+                    isRefreshing = true;
                     if (!isRefreshing && onRefreshListener != null) {
                         onRefreshListener.onRefresh();
                     }
-                    isRefreshing = true;
                 }
             };
 }
